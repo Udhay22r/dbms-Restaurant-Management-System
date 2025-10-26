@@ -155,43 +155,6 @@ orders (1) ──────────── (many) order_details
 - One order can contain multiple menu items (one-to-many)
 - Order details table acts as a junction table between orders and menu items
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- **Python 3.x** - [Download here](https://www.python.org/downloads/)
-- **MySQL Server** - [Download here](https://dev.mysql.com/downloads/mysql/)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your_username/restaurant-management.git
-   cd restaurant-management
-   ```
-
-2. **Install Python dependencies**
-   ```bash
-   pip install mysql-connector-python pymysql tabulate faker
-   ```
-
-3. **Setup MySQL Database**
-   - Install MySQL Server
-   - Create a database named `restaurant`
-   - Update database credentials in the Python files
-
-4. **Initialize the database**
-   ```bash
-   python create_database.py
-   python populate_database.py
-   ```
-
-5. **Run the application**
-   ```bash
-   python main.py
-   ```
-
-
 ## 🔧 Configuration
 
 Before running the application, update the database connection details in:
