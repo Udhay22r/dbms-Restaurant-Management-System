@@ -97,19 +97,6 @@ Links orders to specific menu items with quantities.
 | 3        | 5       | 1        |
 ```
 
-### 🔗 Table Relationships
-
-```
-menu (1) ──────────── (many) order_details
-  │                        │
-  │ item_id                │ item_id
-  │                        │
-  │                        │
-orders (1) ──────────── (many) order_details
-  │                        │
-  │ order_id                │ order_id
-```
-
 **Key Relationships:**
 - One menu item can be in multiple orders (one-to-many)
 - One order can contain multiple menu items (one-to-many)
