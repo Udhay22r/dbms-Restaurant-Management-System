@@ -12,7 +12,47 @@ A simple and efficient Python-based restaurant management system that helps you 
 - 👥 **Customer Management** - Track customer information and table assignments
 - 💾 **Database Storage** - Secure MySQL database for data persistence
 
+## 🚀 Quick Start
 
+### Prerequisites
+
+- **Python 3.x** - [Download here](https://www.python.org/downloads/)
+- **MySQL Server** - [Download here](https://dev.mysql.com/downloads/mysql/)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your_username/restaurant-management.git
+   cd restaurant-management
+   ```
+
+2. **Install Python dependencies**
+   ```bash
+   pip install mysql-connector-python pymysql tabulate faker
+   ```
+
+3. **Setup MySQL Database**
+   - Install MySQL Server
+   - Create a database named `restaurant`
+   - Update database credentials in the Python files
+
+4. **Initialize the database**
+   ```bash
+   python create_database.py
+   python populate_database.py
+   ```
+
+5. **Run the application**
+   ```bash
+   python main.py
+   ```
+
+## 📖 Usage
+
+Once the application is running, you'll see a menu with the following options:
+
+```
 Restaurant Management System
 1. Display menu
 2. Create order
@@ -97,6 +137,19 @@ Links orders to specific menu items with quantities.
 | 3        | 5       | 1        |
 ```
 
+### 🔗 Table Relationships
+
+```
+menu (1) ──────────── (many) order_details
+  │                        │
+  │ item_id                │ item_id
+  │                        │
+  │                        │
+orders (1) ──────────── (many) order_details
+  │                        │
+  │ order_id                │ order_id
+```
+
 **Key Relationships:**
 - One menu item can be in multiple orders (one-to-many)
 - One order can contain multiple menu items (one-to-many)
@@ -147,5 +200,5 @@ Before running the application, update the database connection details in:
 - `create_database.py` (lines 4-6)
 - `populate_database.py` (lines 6-8)
 
-
+Replace the placeholder credentials with your actual MySQL username and password.
 
